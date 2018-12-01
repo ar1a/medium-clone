@@ -25,6 +25,12 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Guardian config deets
+# FIXME: When finished remove secret from config
+config :medium_graphql_api, MediumGraphqlApi.Guardian,
+  issuer: "medium_graphql_api",
+  secret_key: "pRYP+1eOr9431i2i9aj1nx0cNfCt7+Xjcx6UCgPupqau0n2teLd+exrHx5YNHJXU"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
