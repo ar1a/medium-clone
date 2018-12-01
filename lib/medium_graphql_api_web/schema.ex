@@ -19,5 +19,11 @@ defmodule MediumGraphqlApiWeb.Schema do
       arg(:input, non_null(:user_input))
       resolve(&Resolvers.User.register/3)
     end
+
+    @desc "Login"
+    field :login, type: :session do
+      arg(:input, non_null(:session_input))
+      resolve(&Resolvers.User.login/3)
+    end
   end
 end
