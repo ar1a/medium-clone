@@ -4,4 +4,6 @@ defmodule MediumGraphqlApiWeb.Schema.Types do
   alias MediumGraphqlApiWeb.Schema.Types
 
   import_types(Types.User)
+  import_types(Types.Post)
+  import_types(Types.Comment)
 end
