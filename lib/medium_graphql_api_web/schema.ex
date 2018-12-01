@@ -12,4 +12,12 @@ defmodule MediumGraphqlApiWeb.Schema do
       resolve(&Resolvers.User.users/3)
     end
   end
+
+  mutation do
+    @desc "Register a new user"
+    field :register_user, type: :user do
+      arg(:input, non_null(:user_input))
+      resolve(&Resolvers.User.register/3)
+    end
+  end
 end
