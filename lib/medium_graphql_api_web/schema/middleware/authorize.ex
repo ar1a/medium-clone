@@ -10,7 +10,7 @@ defmodule MediumGraphqlApiWeb.Schema.Middleware.Authorize do
     end
   end
 
-  defp corret_role?(%{}, :any), do: true
-  defp corret_role?(%{role: role}, role), do: true
-  defp corret_role?(_, _), do: false
+  defp correct_role?(%{}, :any), do: true
+  defp correct_role?(%{role: role}, role), do: true
+  defp correct_role?(_, _), do: false
 end
